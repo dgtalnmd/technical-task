@@ -1,0 +1,121 @@
+.Container {
+    max-width: 562px;
+    width: 100%;
+    color: white;
+    overflow: auto;
+}
+
+.Header {
+    display: flex;
+    height: 22px;
+    padding-bottom: 8px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.2px solid rgb(118, 118, 118);
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    color: rgb(255, 255, 255);
+
+    @media (max-width: 576px) {
+        font-size: 14px;
+    }
+}
+
+.Button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+    max-width: 234px;
+    width: 100%;
+    height: 36px;
+    border-radius: 4px;
+    border: 0;
+    margin: 28px auto 0;
+
+    backdrop-filter: blur(27px);
+    background: rgb(49, 52, 57);
+
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+
+    cursor: pointer;
+
+    transition: background 0.3s, color 0.3s;
+
+    &:hover {
+        background: rgb(70, 73, 78);
+        color: rgb(200, 200, 200);
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+
+    @media (max-width: 576px) {
+        margin-top: 8px;
+    }
+}
+
+.LikeCounter {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.CommentsList {
+    max-width: 562px;
+    width: 100%;
+    box-sizing: border-box;
+    height: calc(100% - 31px);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-top: 32px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.SpinnerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.Spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #09f;
+    animation: spin 1s linear infinite;
+
+    position: absolute;
+
+    &.Small {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.Toast {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+
+    @media (max-width: 576px) {
+        font-size: 14px;
+    }
+}
