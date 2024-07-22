@@ -2,7 +2,10 @@
     "name": "technical_task",
     "version": "0.1.0",
     "private": true,
+    "homepage": "https://dgtalnmd.github.io/technical-task",
     "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "start": "react-scripts start",
         "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
         "test": "react-scripts test",
@@ -20,6 +23,7 @@
         "axios-mock-adapter": "1.20.0",
         "classnames": "^2.5.1",
         "date-fns": "^3.6.0",
+        "gh-pages": "^6.1.1",
         "plural-ru": "^2.0.2",
         "prettier": "2.3.2",
         "react": "18.2.0",
